@@ -6,7 +6,7 @@ import {
 import { Card, InputGroup, InputNumber, Select, Spin, Toast } from '@douyinfe/semi-ui';
 
 
-const apiKey = import.meta.env.VITE_FUN_KEY as string;
+const apiKey = (import.meta.env?.VITE_FUN_KEY || "") as string;
 
 //
 // ask AI about what is chainId!
@@ -101,14 +101,14 @@ export const Comparator = () => {
                     <InputNumber
                         formatter={value => `${value}`.replace(/[^0-9.]/g, '')}
                         value={usdAmount}
-                        onChange={number => setUsdAmount(number)}
+                        onChange={number => setUsdAmount(number as number)}
                         min={0}
                         max={Number.MAX_SAFE_INTEGER}
                         hideButtons
                     />
                 </InputGroup>
                 <InputGroup>
-                    <Select style={{ width: '200px' }} value={sourceAssetKey} onChange={value => setSourceAssetKey(value)}>
+                    <Select style={{ width: '200px' }} value={sourceAssetKey} onChange={value => setSourceAssetKey(value as string)}>
                         {Object.keys(assetsObject).map(key => (
                             <Select.Option key={key} value={key}>
                                 {assetsObject[key].symbol} (Chain {assetsObject[key].chainId})
@@ -118,14 +118,14 @@ export const Comparator = () => {
                     <InputNumber
                         formatter={value => `${value}`.replace(/[^0-9.]/g, '')}
                         value={usdAmount / exchangeRate[0]}
-                        onChange={number => setUsdAmount(number * exchangeRate[0])}
+                        onChange={number => setUsdAmount(number as number * exchangeRate[0])}
                         min={0}
                         max={Number.MAX_SAFE_INTEGER}
                         hideButtons
                     />
                 </InputGroup>
                 <InputGroup>
-                    <Select style={{ width: '200px' }} value={targetAssetKey} onChange={value => setTargetAssetKey(value)}>
+                    <Select style={{ width: '200px' }} value={targetAssetKey} onChange={value => setTargetAssetKey(value as string)}>
                         {Object.keys(assetsObject).map(key => (
                             <Select.Option key={key} value={key}>
                                 {assetsObject[key].symbol} (Chain {assetsObject[key].chainId})
@@ -135,7 +135,7 @@ export const Comparator = () => {
                     <InputNumber
                         formatter={value => `${value}`.replace(/[^0-9.]/g, '')}
                         value={usdAmount / exchangeRate[1]}
-                        onChange={number => setUsdAmount(number * exchangeRate[1])}
+                        onChange={number => setUsdAmount(number as number * exchangeRate[1])}
                         min={0}
                         max={Number.MAX_SAFE_INTEGER}
                         hideButtons
