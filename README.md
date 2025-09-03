@@ -1,21 +1,28 @@
-# React + TypeScript + Vite
+## 🚀 Getting Started
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Follow these steps to set up and run the project locally:
 
-While this project uses React, Vite supports many popular JS frameworks. [See all the supported frameworks](https://vitejs.dev/guide/#scaffolding-your-first-vite-project).
+```bash
+# Clone the repository
+git clone https://github.com/byte-joshua/fun-ijk.git
 
-## Deploy Your Own
+# Navigate into the project directory
+cd fun-ijk
 
-Deploy your own Vite project with Vercel.
+# Install dependencies
+npm install
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/framework-boilerplates/vite-react&template=vite-react)
+# Start the development server
+npm run dev
 
-_Live Example: https://vite-react-example.vercel.app_
-
-### Deploying From Your Terminal
-
-You can deploy your new Vite project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
-
-```shell
-$ vercel
+App should be running in http://localhost:5173/
 ```
+
+## Deployed Application
+You can access the live application here: [Fun IJK](https://fun-ijk.vercel.app/)
+
+## Assumptions / Design Choices
+No specific assumptions were made, and no unique design choices were implemented.
+
+## Libraries Used
+- **SemiUI**: Used as the component library for its familiar interface and ready-to-use UI components, which help speed up development and maintain a consistent design.
