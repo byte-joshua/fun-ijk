@@ -1,5 +1,4 @@
-import './App.css'
-import { Comparator } from './assets/Comparator'
+import { Comparator } from './Comparator'
 
 function App() {
   return (
